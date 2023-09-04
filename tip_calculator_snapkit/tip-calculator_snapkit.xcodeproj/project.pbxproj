@@ -46,27 +46,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CBC3E0F12AA5806400E24536 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CBC3E0EB2AA5806400E24536 /* tip_calculator_swiftUI.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CBDD78852AA0294C004A05CE;
-			remoteInfo = tip_calculator_swiftUI;
-		};
-		CBC3E0F32AA5806400E24536 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CBC3E0EB2AA5806400E24536 /* tip_calculator_swiftUI.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CBDD78952AA0294E004A05CE;
-			remoteInfo = tip_calculator_swiftUITests;
-		};
-		CBC3E0F52AA5806400E24536 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CBC3E0EB2AA5806400E24536 /* tip_calculator_swiftUI.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CBDD789F2AA0294E004A05CE;
-			remoteInfo = tip_calculator_swiftUIUITests;
-		};
 		CBE347052A96E39400933907 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CBE346E62A96E39200933907 /* Project object */;
@@ -84,7 +63,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CBC3E0EB2AA5806400E24536 /* tip_calculator_swiftUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = tip_calculator_swiftUI.xcodeproj; path = ../tip_calculator_swiftUI/tip_calculator_swiftUI.xcodeproj; sourceTree = "<group>"; };
 		CBDD786F2A9893D6004A05CE /* UiResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiResponder.swift; sourceTree = "<group>"; };
 		CBDD78712A98A002004A05CE /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		CBDD78732A9ED7FC004A05CE /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
@@ -151,20 +129,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CBC3E0EC2AA5806400E24536 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CBC3E0F22AA5806400E24536 /* tip_calculator_swiftUI.app */,
-				CBC3E0F42AA5806400E24536 /* tip_calculator_swiftUITests.xctest */,
-				CBC3E0F62AA5806400E24536 /* tip_calculator_swiftUIUITests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		CBE346E52A96E39200933907 = {
 			isa = PBXGroup;
 			children = (
-				CBC3E0EB2AA5806400E24536 /* tip_calculator_swiftUI.xcodeproj */,
 				CBE346F02A96E39200933907 /* tip-calculator */,
 				CBE347072A96E39400933907 /* tip-calculatorTests */,
 				CBE347112A96E39400933907 /* tip-calculatorUITests */,
@@ -396,12 +363,6 @@
 			);
 			productRefGroup = CBE346EF2A96E39200933907 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = CBC3E0EC2AA5806400E24536 /* Products */;
-					ProjectRef = CBC3E0EB2AA5806400E24536 /* tip_calculator_swiftUI.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				CBE346ED2A96E39200933907 /* tip-calculator_snapkit */,
@@ -410,30 +371,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		CBC3E0F22AA5806400E24536 /* tip_calculator_swiftUI.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = tip_calculator_swiftUI.app;
-			remoteRef = CBC3E0F12AA5806400E24536 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CBC3E0F42AA5806400E24536 /* tip_calculator_swiftUITests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = tip_calculator_swiftUITests.xctest;
-			remoteRef = CBC3E0F32AA5806400E24536 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CBC3E0F62AA5806400E24536 /* tip_calculator_swiftUIUITests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = tip_calculator_swiftUIUITests.xctest;
-			remoteRef = CBC3E0F52AA5806400E24536 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CBE346EC2A96E39200933907 /* Resources */ = {

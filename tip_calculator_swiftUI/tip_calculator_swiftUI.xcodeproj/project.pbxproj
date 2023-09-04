@@ -40,27 +40,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CBA559D32AA5818F0067A7F5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CBA559CC2AA5818F0067A7F5 /* tip-calculator_snapkit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CBE346EE2A96E39200933907;
-			remoteInfo = "tip-calculator_snapkit";
-		};
-		CBA559D52AA5818F0067A7F5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CBA559CC2AA5818F0067A7F5 /* tip-calculator_snapkit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CBE347042A96E39400933907;
-			remoteInfo = "tip-calculator_snapkitTests";
-		};
-		CBA559D72AA5818F0067A7F5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CBA559CC2AA5818F0067A7F5 /* tip-calculator_snapkit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CBE3470E2A96E39400933907;
-			remoteInfo = "tip-calculator_snapkitUITests";
-		};
 		CBDD78962AA0294E004A05CE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CBDD787D2AA0294C004A05CE /* Project object */;
@@ -78,7 +57,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CBA559CC2AA5818F0067A7F5 /* tip-calculator_snapkit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "tip-calculator_snapkit.xcodeproj"; path = "../tip_calculator_snapkit/tip-calculator_snapkit.xcodeproj"; sourceTree = "<group>"; };
 		CBC3E0E32AA183E300E24536 /* CurrencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyView.swift; sourceTree = "<group>"; };
 		CBC3E0E72AA57F0300E24536 /* TipButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipButtonView.swift; sourceTree = "<group>"; };
 		CBC3E0E92AA57F1900E24536 /* CustomTipButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTipButtonView.swift; sourceTree = "<group>"; };
@@ -139,20 +117,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CBA559CD2AA5818F0067A7F5 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CBA559D42AA5818F0067A7F5 /* tip-calculator_snapkit.app */,
-				CBA559D62AA5818F0067A7F5 /* tip-calculator_snapkitTests.xctest */,
-				CBA559D82AA5818F0067A7F5 /* tip-calculator_snapkitUITests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		CBDD787C2AA0294C004A05CE = {
 			isa = PBXGroup;
 			children = (
-				CBA559CC2AA5818F0067A7F5 /* tip-calculator_snapkit.xcodeproj */,
 				CBDD78872AA0294C004A05CE /* tip_calculator_swiftUI */,
 				CBDD78982AA0294E004A05CE /* tip_calculator_swiftUITests */,
 				CBDD78A22AA0294E004A05CE /* tip_calculator_swiftUIUITests */,
@@ -375,12 +342,6 @@
 			mainGroup = CBDD787C2AA0294C004A05CE;
 			productRefGroup = CBDD78862AA0294C004A05CE /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = CBA559CD2AA5818F0067A7F5 /* Products */;
-					ProjectRef = CBA559CC2AA5818F0067A7F5 /* tip-calculator_snapkit.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				CBDD78842AA0294C004A05CE /* tip_calculator_swiftUI */,
@@ -389,30 +350,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		CBA559D42AA5818F0067A7F5 /* tip-calculator_snapkit.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = "tip-calculator_snapkit.app";
-			remoteRef = CBA559D32AA5818F0067A7F5 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CBA559D62AA5818F0067A7F5 /* tip-calculator_snapkitTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "tip-calculator_snapkitTests.xctest";
-			remoteRef = CBA559D52AA5818F0067A7F5 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CBA559D82AA5818F0067A7F5 /* tip-calculator_snapkitUITests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "tip-calculator_snapkitUITests.xctest";
-			remoteRef = CBA559D72AA5818F0067A7F5 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CBDD78832AA0294C004A05CE /* Resources */ = {

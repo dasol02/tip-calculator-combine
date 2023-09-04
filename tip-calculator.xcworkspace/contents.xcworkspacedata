@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:tip_calculator_swiftUI/../tip_calculator_swiftui_tca/tip_calculator_swiftui_tca.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:tip_calculator_swiftUI/tip_calculator_swiftUI.xcodeproj">
    </FileRef>
    <FileRef
