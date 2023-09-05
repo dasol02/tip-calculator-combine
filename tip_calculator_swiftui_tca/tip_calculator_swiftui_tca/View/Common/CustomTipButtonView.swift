@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 struct CustomTipButtonView: View {
-    @Binding var tipInput: Tip
     @State private var customtipValue: Int = 0
     @State private var openAlert: Bool = false
+    
+    let store: StoreOf<Calculator>
     
     var attributedText: AttributedString {
         var tipValue: AttributedString
@@ -32,38 +34,46 @@ struct CustomTipButtonView: View {
     }
     
     var body: some View {
-        Button {
-            openAlert.toggle()
-        } label: {
-            Text(attributedText)
-                .padding()
-                .foregroundColor(.white)
-        }
-        .onChange(of: tipInput, perform: { newValue in
-            if tipInput.stringValue != customtipValue.stringValue {
-                customtipValue = 0
+        WithViewStore(self.store, observe: { $0 }) { viewStore in
+            Button {
+                openAlert.toggle()
+            } label: {
+                Text(attributedText)
+                    .padding()
+                    .foregroundColor(.white)
             }
-        })
-        .frame(maxWidth: .infinity)
-        .background(
-            RoundedRectangle(cornerRadius: 8)
-                .fill(customtipValue.stringValue == tipInput.stringValue ? ThemeColor.secondary : ThemeColor.primary)
-        )
-        .alert("Enter custom tip", isPresented: $openAlert) {
-            TextField("Make it generous", value: $customtipValue, formatter: NumberFormatter())
-                .keyboardType(.numbersAndPunctuation)
-            Button("OK", action: submit)
-            Button("Cancel", role: .cancel) {}
+            .onChange(of: viewStore.tip, perform: { newValue in
+                if viewStore.tip.stringValue != customtipValue.stringValue {
+                    customtipValue = 0
+                }
+            })
+            .frame(maxWidth: .infinity)
+            .background(
+                RoundedRectangle(cornerRadius: 8)
+                    .fill(customtipValue.stringValue == viewStore.tip.stringValue ? ThemeColor.secondary : ThemeColor.primary)
+            )
+            .alert("Enter custom tip", isPresented: $openAlert) {
+                TextField("Make it generous",
+                          value: $customtipValue,
+                          formatter: NumberFormatter())
+                    .keyboardType(.numberPad)
+                Button("OK", action: submit)
+                Button("Cancel", role: .cancel) {}
+            }
         }
     }
     
     func submit() {
-        tipInput = Tip.custom(value: customtipValue)
+        self.store.send(.updateTipButtonTapped(Tip.custom(value: customtipValue)))
     }
 }
 
 struct CustomTipButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        TipButtonView(defaultTip: .none, tipInput: .constant(.none))
+        CustomTipButtonView(
+            store: Store(initialState: Calculator.State(),
+                         reducer: { Calculator() }
+                        )
+        )
     }
 }

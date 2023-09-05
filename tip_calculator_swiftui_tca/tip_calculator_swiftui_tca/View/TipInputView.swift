@@ -6,21 +6,23 @@
 //
 
 import SwiftUI
-import Combine
+import ComposableArchitecture
 
 struct TipInputView: View {
-    @Binding var tipInput: Tip
+    let store: StoreOf<Calculator>
     
     var body: some View {
-        HStack(alignment: .top, spacing: 24) {
-            HeaderView(topText: "Chose", bottomText: "your tip")
-            VStack(spacing: 16) {
-                HStack(spacing: 16) {
-                    TipButtonView(defaultTip: .tenPercent, tipInput: $tipInput)
-                    TipButtonView(defaultTip: .fiftenPercent, tipInput: $tipInput)
-                    TipButtonView(defaultTip: .twentyPercent, tipInput: $tipInput)
+        WithViewStore(self.store, observe: { $0 }) { viewStore in
+            HStack(alignment: .top, spacing: 24) {
+                HeaderView(topText: "Chose", bottomText: "your tip")
+                VStack(spacing: 16) {
+                    HStack(spacing: 16) {
+                        TipButtonView(defaultTip: .tenPercent, store: store)
+                        TipButtonView(defaultTip: .fiftenPercent, store: store)
+                        TipButtonView(defaultTip: .twentyPercent, store: store)
+                    }
+                    CustomTipButtonView(store: store)
                 }
-                CustomTipButtonView(tipInput: $tipInput)
             }
         }
     }
@@ -28,6 +30,10 @@ struct TipInputView: View {
 
 struct TipInputView_Previews: PreviewProvider {
     static var previews: some View {
-        TipInputView(tipInput: .constant(.none))
+        TipInputView(
+            store: Store(initialState: Calculator.State(),
+                         reducer: { Calculator() }
+                        )
+        )
     }
 }

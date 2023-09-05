@@ -6,31 +6,39 @@
 //
 
 import SwiftUI
-import Combine
+import ComposableArchitecture
 
 struct BillInputView: View {
-    @Binding var billInput: Double
+    let store: StoreOf<Calculator>
     
     var body: some View {
-        HStack(spacing: 24) {
-            HeaderView(topText: "Enter", bottomText: "your bill")
-            HStack {
-                Text("$")
-                    .font(ThemeFont.bold(ofSize: 24))
-                    .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
-                TextField("", value: $billInput, format: .number)
-                    .font(ThemeFont.demibold(ofSize: 28))
-                    .keyboardType(.numberPad)
+        WithViewStore(self.store, observe: { $0 }) { viewStore in
+            HStack(spacing: 24) {
+                HeaderView(topText: "Enter", bottomText: "your bill")
+                HStack {
+                    Text("$")
+                        .font(ThemeFont.bold(ofSize: 24))
+                        .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
+                    TextField("",
+                              text: viewStore.binding(get: \.bill.currencyFormatted,
+                                                      send: Calculator.Action.inputBill))
+                        .font(ThemeFont.demibold(ofSize: 28))
+                        .keyboardType(.numberPad)
+                }
+                .frame(height: 68)
+                .background(.white)
+                .clipShape(RoundedRectangle(cornerRadius: 8))
             }
-            .frame(height: 68)
-            .background(.white)
-            .clipShape(RoundedRectangle(cornerRadius: 8))
         }
     }
 }
 
 struct BillInputView_Previews: PreviewProvider {
     static var previews: some View {
-        BillInputView(billInput: .constant(0))
+        BillInputView(
+            store: Store(initialState: Calculator.State(),
+                         reducer: { Calculator() }
+                        )
+        )
     }
 }

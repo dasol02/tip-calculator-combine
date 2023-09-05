@@ -6,31 +6,41 @@
 //
 
 import SwiftUI
-import Combine
+import ComposableArchitecture
 
 struct ContentView: View {
-    @EnvironmentObject var calculaotrVM: CalculatorVM
+    let store: StoreOf<Calculator>
     
     var body: some View {
-        VStack(spacing: 30) {
-            LogoView()
-            ResultView(result: $calculaotrVM.result)
-            BillInputView(billInput: $calculaotrVM.bill)
-            TipInputView(tipInput: $calculaotrVM.tip)
-            SplitInputView(splitInput: $calculaotrVM.split)
-            Spacer()
-        }
-        .padding(24)
-        .background(ThemeColor.bg)
-        .onTapGesture {
-            hideKeyboard()
+        WithViewStore(self.store, observe: { $0 }) { viewStore in
+            VStack(spacing: 30) {
+                LogoView()
+                    .onTapGesture {
+                        self.store.send(.resetButtonTapped)
+                    }
+                ResultView(store: store)
+                BillInputView(store: store)
+                TipInputView(store: store)
+                SplitInputView(store: store)
+                Spacer()
+            }
+            .padding(24)
+            .background(ThemeColor.bg)
+            .onTapGesture {
+                hideKeyboard()
+            }
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
-            .environmentObject(CalculatorVM())
+        ContentView(
+            store: Store(
+                initialState: Calculator.State(),
+                reducer: {
+                    Calculator()
+                })
+        )
     }
 }

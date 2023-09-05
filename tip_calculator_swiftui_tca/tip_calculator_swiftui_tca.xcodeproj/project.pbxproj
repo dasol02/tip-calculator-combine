@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB31F34B2AA5BD900083B31C /* CalculatorVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB31F32D2AA5BD900083B31C /* CalculatorVM.swift */; };
 		CB31F34C2AA5BD900083B31C /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB31F32F2AA5BD900083B31C /* Tip.swift */; };
 		CB31F34D2AA5BD900083B31C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB31F3302AA5BD900083B31C /* Result.swift */; };
 		CB31F34E2AA5BD900083B31C /* ThemeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB31F3322AA5BD900083B31C /* ThemeFont.swift */; };
@@ -15,7 +14,6 @@
 		CB31F3502AA5BD900083B31C /* icCalculatorBW.png in Resources */ = {isa = PBXBuildFile; fileRef = CB31F3342AA5BD900083B31C /* icCalculatorBW.png */; };
 		CB31F3512AA5BD900083B31C /* SplitInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB31F3362AA5BD900083B31C /* SplitInputView.swift */; };
 		CB31F3522AA5BD900083B31C /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB31F3372AA5BD900083B31C /* ResultView.swift */; };
-		CB31F3532AA5BD900083B31C /* tip-calculator.xcworkspace in Resources */ = {isa = PBXBuildFile; fileRef = CB31F3392AA5BD900083B31C /* tip-calculator.xcworkspace */; };
 		CB31F3542AA5BD900083B31C /* TipButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB31F33A2AA5BD900083B31C /* TipButtonView.swift */; };
 		CB31F3552AA5BD900083B31C /* CustomTipButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB31F33B2AA5BD900083B31C /* CustomTipButtonView.swift */; };
 		CB31F3562AA5BD900083B31C /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB31F33C2AA5BD900083B31C /* HeaderView.swift */; };
@@ -32,6 +30,8 @@
 		CB31F3612AA5BD900083B31C /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB31F3482AA5BD900083B31C /* Int.swift */; };
 		CB31F3622AA5BD900083B31C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB31F3492AA5BD900083B31C /* String.swift */; };
 		CB31F3632AA5BD900083B31C /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB31F34A2AA5BD900083B31C /* Double.swift */; };
+		CB31F3652AA5C17A0083B31C /* Calculaotr.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB31F3642AA5C17A0083B31C /* Calculaotr.swift */; };
+		CB31F3682AA5C1AC0083B31C /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = CB31F3672AA5C1AC0083B31C /* ComposableArchitecture */; };
 		CB92D5012AA5BCED00CA125A /* tip_calculator_swiftui_tcaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92D5002AA5BCED00CA125A /* tip_calculator_swiftui_tcaApp.swift */; };
 		CB92D5052AA5BCEE00CA125A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB92D5042AA5BCEE00CA125A /* Assets.xcassets */; };
 		CB92D5082AA5BCEE00CA125A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB92D5072AA5BCEE00CA125A /* Preview Assets.xcassets */; };
@@ -58,7 +58,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CB31F32D2AA5BD900083B31C /* CalculatorVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorVM.swift; sourceTree = "<group>"; };
 		CB31F32F2AA5BD900083B31C /* Tip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		CB31F3302AA5BD900083B31C /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		CB31F3322AA5BD900083B31C /* ThemeFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeFont.swift; sourceTree = "<group>"; };
@@ -66,7 +65,6 @@
 		CB31F3342AA5BD900083B31C /* icCalculatorBW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icCalculatorBW.png; sourceTree = "<group>"; };
 		CB31F3362AA5BD900083B31C /* SplitInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitInputView.swift; sourceTree = "<group>"; };
 		CB31F3372AA5BD900083B31C /* ResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
-		CB31F3392AA5BD900083B31C /* tip-calculator.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = "tip-calculator.xcworkspace"; sourceTree = "<group>"; };
 		CB31F33A2AA5BD900083B31C /* TipButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipButtonView.swift; sourceTree = "<group>"; };
 		CB31F33B2AA5BD900083B31C /* CustomTipButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTipButtonView.swift; sourceTree = "<group>"; };
 		CB31F33C2AA5BD900083B31C /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
@@ -83,6 +81,7 @@
 		CB31F3482AA5BD900083B31C /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		CB31F3492AA5BD900083B31C /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		CB31F34A2AA5BD900083B31C /* Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		CB31F3642AA5C17A0083B31C /* Calculaotr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculaotr.swift; sourceTree = "<group>"; };
 		CB92D4FD2AA5BCED00CA125A /* tip_calculator_swiftui_tca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tip_calculator_swiftui_tca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB92D5002AA5BCED00CA125A /* tip_calculator_swiftui_tcaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tip_calculator_swiftui_tcaApp.swift; sourceTree = "<group>"; };
 		CB92D5042AA5BCEE00CA125A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB31F3682AA5C1AC0083B31C /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,7 +130,7 @@
 		CB31F32C2AA5BD900083B31C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				CB31F32D2AA5BD900083B31C /* CalculatorVM.swift */,
+				CB31F3642AA5C17A0083B31C /* Calculaotr.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -170,7 +170,6 @@
 		CB31F3382AA5BD900083B31C /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				CB31F3392AA5BD900083B31C /* tip-calculator.xcworkspace */,
 				CB31F33A2AA5BD900083B31C /* TipButtonView.swift */,
 				CB31F33B2AA5BD900083B31C /* CustomTipButtonView.swift */,
 				CB31F33C2AA5BD900083B31C /* HeaderView.swift */,
@@ -271,6 +270,9 @@
 			dependencies = (
 			);
 			name = tip_calculator_swiftui_tca;
+			packageProductDependencies = (
+				CB31F3672AA5C1AC0083B31C /* ComposableArchitecture */,
+			);
 			productName = tip_calculator_swiftui_tca;
 			productReference = CB92D4FD2AA5BCED00CA125A /* tip_calculator_swiftui_tca.app */;
 			productType = "com.apple.product-type.application";
@@ -343,6 +345,9 @@
 				Base,
 			);
 			mainGroup = CB92D4F42AA5BCED00CA125A;
+			packageReferences = (
+				CB31F3662AA5C1AC0083B31C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = CB92D4FE2AA5BCED00CA125A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -361,7 +366,6 @@
 			files = (
 				CB31F3502AA5BD900083B31C /* icCalculatorBW.png in Resources */,
 				CB92D5082AA5BCEE00CA125A /* Preview Assets.xcassets in Resources */,
-				CB31F3532AA5BD900083B31C /* tip-calculator.xcworkspace in Resources */,
 				CB92D5052AA5BCEE00CA125A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,10 +401,10 @@
 				CB31F3632AA5BD900083B31C /* Double.swift in Sources */,
 				CB31F3602AA5BD900083B31C /* UIColor.swift in Sources */,
 				CB31F34C2AA5BD900083B31C /* Tip.swift in Sources */,
-				CB31F34B2AA5BD900083B31C /* CalculatorVM.swift in Sources */,
 				CB31F3582AA5BD900083B31C /* RoundedCorners.swift in Sources */,
 				CB31F35F2AA5BD900083B31C /* UIView.swift in Sources */,
 				CB31F34F2AA5BD900083B31C /* ThemeColor.swift in Sources */,
+				CB31F3652AA5C17A0083B31C /* Calculaotr.swift in Sources */,
 				CB31F35D2AA5BD900083B31C /* BillInputView.swift in Sources */,
 				CB31F3562AA5BD900083B31C /* HeaderView.swift in Sources */,
 				CB31F3572AA5BD900083B31C /* CurrencyView.swift in Sources */,
@@ -735,6 +739,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CB31F3662AA5C1AC0083B31C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CB31F3672AA5C1AC0083B31C /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB31F3662AA5C1AC0083B31C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CB92D4F52AA5BCED00CA125A /* Project object */;
 }

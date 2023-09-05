@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 enum CurrencyViewType {
     case amount
@@ -35,24 +36,31 @@ enum CurrencyViewType {
 }
 
 struct CurrencyView: View {
-    @Binding var amount: String
     @State var currencyViewType: CurrencyViewType
+    let store: StoreOf<Calculator>
     
     var body: some View {
-        HStack(alignment: .bottom, spacing: 0) {
-            Text("$")
-                .font(ThemeFont.bold(ofSize: currencyViewType.currencySize))
-                .foregroundColor(currencyViewType.fontColor)
-            Text(amount)
-                .font(ThemeFont.bold(ofSize: currencyViewType.amountSize))
-                .foregroundColor(currencyViewType.fontColor)
-                .padding(EdgeInsets(.init(top: 0, leading: 0, bottom: -5, trailing: 0)))
+        WithViewStore(self.store, observe: { $0 }) { viewStore in
+            HStack(alignment: .bottom, spacing: 0) {
+                Text("$")
+                    .font(ThemeFont.bold(ofSize: currencyViewType.currencySize))
+                    .foregroundColor(currencyViewType.fontColor)
+                Text(currencyViewType == .bill ? viewStore.result.totalBill :
+                        currencyViewType == .tip ? viewStore.result.totalTip : viewStore.result.amountPerPerson)
+                    .font(ThemeFont.bold(ofSize: currencyViewType.amountSize))
+                    .foregroundColor(currencyViewType.fontColor)
+                    .padding(EdgeInsets(.init(top: 0, leading: 0, bottom: -5, trailing: 0)))
+            }
         }
     }
 }
 
 struct CurrencyView_Previews: PreviewProvider {
     static var previews: some View {
-        CurrencyView(amount: .constant("0"), currencyViewType: .amount)
+        CurrencyView(currencyViewType: .amount,
+                     store: Store(initialState: Calculator.State(),
+                                  reducer: { Calculator() }
+                                 )
+        )
     }
 }

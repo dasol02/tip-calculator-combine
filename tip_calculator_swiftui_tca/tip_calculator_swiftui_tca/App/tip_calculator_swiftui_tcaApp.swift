@@ -6,14 +6,19 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct tip_calculator_swiftui_tcaApp: App {
-    @StateObject var calculaotrVM = CalculatorVM()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environmentObject(calculaotrVM)
+            ContentView(
+                store: Store(
+                    initialState: Calculator.State(),
+                    reducer: {
+                        Calculator()
+                    }) )
         }
     }
 }

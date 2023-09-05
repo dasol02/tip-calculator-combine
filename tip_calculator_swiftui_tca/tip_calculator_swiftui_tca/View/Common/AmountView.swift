@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 enum AmountViewType {
     case bill
@@ -15,13 +16,16 @@ enum AmountViewType {
 struct AmountView: View {
     @State var viewType: AmountViewType
     @State var title: String
-    @Binding var result: Result
+    
+    let store: StoreOf<Calculator>
     
     var body: some View {
-        VStack(alignment: viewType == .bill ? .leading : .trailing) {
-            Text(title)
-            CurrencyView(amount: viewType == .bill ? $result.totalBill : $result.totalTip,
-                         currencyViewType: viewType == .bill ? .bill : .tip)
+        WithViewStore(self.store, observe: { $0 }) { viewStore in
+            VStack(alignment: viewType == .bill ? .leading : .trailing) {
+                Text(title)
+                CurrencyView(currencyViewType: viewType == .bill ? .bill : .tip,
+                             store: store)
+            }
         }
     }
 }
@@ -30,10 +34,10 @@ struct AmountView_Previews: PreviewProvider {
     static var previews: some View {
         AmountView(viewType: .bill,
                    title: "Total Bill",
-                   result: .constant(
-                    Result(
-                        amountPerPerson: "0",
-                        totalBill: "0",
-                        totalTip: "0")))
+                   store: Store(initialState: Calculator.State(),
+                                reducer: { Calculator() }
+                               )
+                   )
+        
     }
 }

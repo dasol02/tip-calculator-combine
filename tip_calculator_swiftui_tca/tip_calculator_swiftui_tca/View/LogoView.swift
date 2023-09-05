@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct LogoView: View {
-    @EnvironmentObject var calculaotrVM: CalculatorVM
-    
     var topLogoTextA: AttributedString {
         var leftText = AttributedString("Mr")
         leftText.font = ThemeFont.demibold(ofSize: 16)
@@ -31,15 +29,11 @@ struct LogoView: View {
             }
         }
         .frame(height: 48)
-        .onTapGesture {
-            calculaotrVM.reset()
-        }
     }
 }
 
 struct LogoView_Previews: PreviewProvider {
     static var previews: some View {
         LogoView()
-            .environmentObject(CalculatorVM())
     }
 }
