@@ -36,31 +36,25 @@ enum CurrencyViewType {
 }
 
 struct CurrencyView: View {
-    @State var currencyViewType: CurrencyViewType
-    let store: StoreOf<Calculator>
+    var currencyViewType: CurrencyViewType
+    var result: Result
     
     var body: some View {
-        WithViewStore(self.store, observe: { $0 }) { viewStore in
             HStack(alignment: .bottom, spacing: 0) {
                 Text("$")
                     .font(ThemeFont.bold(ofSize: currencyViewType.currencySize))
                     .foregroundColor(currencyViewType.fontColor)
-                Text(currencyViewType == .bill ? viewStore.result.totalBill :
-                        currencyViewType == .tip ? viewStore.result.totalTip : viewStore.result.amountPerPerson)
+                Text(currencyViewType == .bill ? result.totalBill :
+                        currencyViewType == .tip ? result.totalTip : result.amountPerPerson)
                     .font(ThemeFont.bold(ofSize: currencyViewType.amountSize))
                     .foregroundColor(currencyViewType.fontColor)
                     .padding(EdgeInsets(.init(top: 0, leading: 0, bottom: -5, trailing: 0)))
             }
-        }
     }
 }
 
 struct CurrencyView_Previews: PreviewProvider {
     static var previews: some View {
-        CurrencyView(currencyViewType: .amount,
-                     store: Store(initialState: Calculator.State(),
-                                  reducer: { Calculator() }
-                                 )
-        )
+        CurrencyView(currencyViewType: .amount, result: Result(amountPerPerson: "0", totalBill: "0", totalTip: "0"))
     }
 }

@@ -18,7 +18,7 @@ struct ContentView: View {
                     .onTapGesture {
                         self.store.send(.resetButtonTapped)
                     }
-                ResultView(store: store)
+                ResultView(result: viewStore.result)
                 BillInputView(store: store)
                 TipInputView(store: store)
                 SplitInputView(store: store)

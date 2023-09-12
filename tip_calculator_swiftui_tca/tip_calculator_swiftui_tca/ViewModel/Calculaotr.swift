@@ -52,8 +52,7 @@ struct Calculator: Reducer {
     func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
         case let .inputBill(bill):
-            print(bill)
-            state.bill = bill.doubleValue!
+            state.bill = bill.doubleValue ?? 0
             state.calculation()
             return .none
         case let .updateTipButtonTapped(tip):
