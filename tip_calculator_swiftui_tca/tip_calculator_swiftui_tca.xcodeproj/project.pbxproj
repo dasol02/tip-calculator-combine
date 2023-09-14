@@ -157,12 +157,12 @@
 			isa = PBXGroup;
 			children = (
 				CB31F3382AA5BD900083B31C /* Common */,
-				CB31F3362AA5BD900083B31C /* SplitInputView.swift */,
-				CB31F3372AA5BD900083B31C /* ResultView.swift */,
-				CB31F3412AA5BD900083B31C /* LogoView.swift */,
-				CB31F3422AA5BD900083B31C /* TipInputView.swift */,
-				CB31F3432AA5BD900083B31C /* BillInputView.swift */,
 				CB31F3442AA5BD900083B31C /* ContentView.swift */,
+				CB31F3412AA5BD900083B31C /* LogoView.swift */,
+				CB31F3372AA5BD900083B31C /* ResultView.swift */,
+				CB31F3432AA5BD900083B31C /* BillInputView.swift */,
+				CB31F3422AA5BD900083B31C /* TipInputView.swift */,
+				CB31F3362AA5BD900083B31C /* SplitInputView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

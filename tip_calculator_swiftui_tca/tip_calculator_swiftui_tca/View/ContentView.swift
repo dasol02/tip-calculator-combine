@@ -20,8 +20,16 @@ struct ContentView: View {
                     }
                 ResultView(result: viewStore.result)
                 BillInputView(store: store)
-                TipInputView(store: store)
-                SplitInputView(store: store)
+                TipInputView(inputTip: viewStore.tip) { tip in
+                    viewStore.send(.updateTipButtonTapped(tip))
+                }
+                SplitInputView(split: viewStore.split) { splitInputViewAction in
+                    switch splitInputViewAction {
+                    case .decrementSplitButtonTapped: viewStore.send(.decrementSplitButtonTapped)
+                    case .incrementSpolitButtonTapped:
+                        viewStore.send(.incrementSpolitButtonTapped)
+                    }
+                }
                 Spacer()
             }
             .padding(24)
